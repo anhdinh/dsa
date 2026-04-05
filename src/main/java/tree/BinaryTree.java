@@ -38,6 +38,8 @@ public class BinaryTree {
             root = newNode;
             return;
         }
+
+        // tim ra dau la parent de chuan bi insert node
         Node current = root;
         Node parent = null;
         while (current != null) {
@@ -50,6 +52,8 @@ public class BinaryTree {
                 return;
             }
         }
+
+        // kiem tra xem no o phia nao cua parent
 
         if (value < parent.value) {
             parent.left = newNode;
