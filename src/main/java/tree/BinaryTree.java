@@ -32,6 +32,18 @@ public class BinaryTree {
         }
     }
 
+    public Node getRoot() {
+        return root;
+    }
+
+    public void traverseInOrder(Node node){
+        if(node!=null){
+            traverseInOrder(node.left);
+            System.out.println(node.value + " ");
+            traverseInOrder(node.right);
+        }
+    }
+
     public void insertNoRecursion(int value) {
         Node newNode = new Node(value);
         if (root == null) {

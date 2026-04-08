@@ -33,6 +33,17 @@ class BinaryTreeTest {
         tree1.insert(6);
     }
 
+    @Test
+    void testTraverseInOrder(){
+        BinaryTree tree1 =  new BinaryTree(5);
+        tree1.insert(3);
+        tree1.insert(7);
+        tree1.insert(2);
+        tree1.insert(4);
+        tree1.insert(6);
+        tree1.traverseInOrder(tree1.getRoot());
+    }
+
 
     static Stream<Arguments> provideInsertData() {
         return Stream.of(
