@@ -103,4 +103,8 @@ public class BinaryTree {
         newNode.right = cloneNode(node.right,newNode);
         return newNode;
     }
+
+    public String toString(){
+        return "hello tree";
+    }
 }
