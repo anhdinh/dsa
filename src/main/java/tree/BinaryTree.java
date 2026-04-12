@@ -16,6 +16,7 @@ public class BinaryTree {
     }
 
     private void insert(Node current, int value) {
+        System.out.println("insert value "+ value);
         Node newNode = new Node(value);
         if (current.value > value) {
             if (current.left == null) {
