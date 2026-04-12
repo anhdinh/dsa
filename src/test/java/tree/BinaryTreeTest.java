@@ -45,6 +45,24 @@ class BinaryTreeTest {
     }
 
 
+    @Test
+    void testTraversePreOrder(){
+        BinaryTree tree1 =  new BinaryTree(5);
+        tree1.insert(3);
+        tree1.insert(7);
+        tree1.insert(2);
+        tree1.insert(4);
+        tree1.insert(6);
+        tree1.traversePreOrder(tree1.getRoot());
+        System.out.println("clone tree and show it");
+
+        BinaryTree cloneTree = tree1.cloneTree();
+        cloneTree.traverseInOrder(cloneTree.getRoot());
+        System.out.println("Copy Done");
+    }
+
+
+
     static Stream<Arguments> provideInsertData() {
         return Stream.of(
                 Arguments.of((Object) new int[]{5, 3, 7,8, 2, 4}),

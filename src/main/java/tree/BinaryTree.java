@@ -44,6 +44,14 @@ public class BinaryTree {
         }
     }
 
+    public void traversePreOrder(Node node){
+        if(node!=null){
+            System.out.println(node.value);
+            traversePreOrder(node.left);
+            traversePreOrder(node.right);
+        }
+    }
+
     public void insertNoRecursion(int value) {
         Node newNode = new Node(value);
         if (root == null) {
@@ -75,5 +83,23 @@ public class BinaryTree {
     }
 
 
+    public BinaryTree cloneTree() {
+        BinaryTree cloneTree = new BinaryTree();
+        cloneTree.root = cloneNode(root,null);
+        return  cloneTree;
 
+    }
+
+    private Node cloneNode(Node node,Node parentNode){
+        if(node ==null){
+            return  null;
+        }
+
+        Node newNode = new Node(node.value);
+        newNode.color = node.color;
+        newNode.parent = parentNode;
+        newNode.left = cloneNode(node.left,newNode);
+        newNode.right = cloneNode(node.right,newNode);
+        return newNode;
+    }
 }
