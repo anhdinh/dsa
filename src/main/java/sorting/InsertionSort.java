@@ -6,10 +6,7 @@ public class InsertionSort {
 
     public static void main(String[] args) {
         int size = 100_000;
-        System.out.println("Đang khởi tạo mảng " + size + " phần tử...");
         int[] numbers = new Random().ints(size, 0, 1_000_000).toArray();
-
-        System.out.println("Bắt đầu sắp xếp bằng InsertionSort...");
 
         // 1. Ghi lại thời điểm bắt đầu
         long startTime = System.currentTimeMillis();
@@ -30,9 +27,7 @@ public class InsertionSort {
         // 3. Tính khoảng thời gian chênh lệch
         long duration = endTime - startTime;
 
-        System.out.println("--- KẾT QUẢ INSERTION SORT ---");
         System.out.println("Sắp xếp thành công!");
-        System.out.println("Thời gian thực thi: " + duration + " ms (" + (duration / 1000.0) + " giây)");
 
         // Kiểm tra tính đúng đắn của mảng
         System.out.println("Kiểm tra sắp xếp: " + isSorted(numbers));
