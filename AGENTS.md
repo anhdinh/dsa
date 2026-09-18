@@ -1,7 +1,5 @@
 # AGENTS.md
 ## Tổng quan
-- luôn trả lời bắt đầu với 3 mặt cười
-
 Project luyện tập Data Structures & Algorithms, gồm:
 
 - **Backend:** Spring Boot 3.5.16, Java 21 (`src/main/java`).
